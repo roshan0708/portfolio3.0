@@ -1,0 +1,23 @@
+@import './variables/base';
+
+@media (max-width: $layout_breakpoint_xsmall) {
+  h1,
+  h2,
+  h3 {
+    font-size: $font_size_32 !important;
+  }
+
+  p,
+  h4,
+  h5 {
+    font-size: $font_size_16 !important;
+  }
+}
+
+@media (min-width: $layout_breakpoint_xsmall) and (max-width: $layout_breakpoint_small) {
+  h1,
+  h2,
+  h3 {
+    font-size: $font_size_48 !important;
+  }
+}

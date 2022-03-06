@@ -1,0 +1,49 @@
+@import '../../styles/variables/base';
+
+.hero {
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/23/73/qFO12L.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+  }
+  &TitleText {
+    text-align: center;
+    font-size: $font_size_80;
+    letter-spacing: 1.3px;
+    white-space: nowrap;
+    font-weight: 600;
+    margin-bottom: 0;
+    &::after {
+      content: '';
+      display: inherit;
+      width: 10%;
+      margin: 10px auto;
+      border-top: 2px solid $navy_blue;
+      border-radius: 5px;
+    }
+    &Two {
+      font-family: 'Dancing Script', cursive;
+    }
+  }
+  &Subtitle {
+    text-align: center;
+    font-size: $font_size_24;
+    margin: 15px auto;
+    &Two {
+      font-size: $font_size_32;
+      font-weight: bold;
+      font-family: 'Dancing Script', cursive;
+      @media (max-width: $layout_breakpoint_xsmall) {
+        font-size: $font_size_24;
+      }
+    }
+  }
+}
