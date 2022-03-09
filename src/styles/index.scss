@@ -1,16 +1,27 @@
 @import './variables/base';
 @import './responsive';
 
+/* to hide default cursor */
+* {
+  cursor: none;
+}
+
+/* resetting default styles */
 html {
   line-height: 1.5;
 
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
     font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
     color: $navy_blue;
     margin: 0;
     background: $white_100;
+    min-height: 100vh;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 

@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { MouseContext } from '@root/context/mouseContext';
 import './Hero.scss';
 
 // ease: [0.6, 0.01, -0.05, 0.95]
@@ -29,9 +30,15 @@ const text = {
 };
 
 const Header = (): ReactElement => {
+  const { cursorChangeHandler } = useContext(MouseContext);
   return (
     <motion.div className="heroWrapper" variants={wrapper} initial="initial" animate="animate">
-      <motion.h2 className="heroTitleText" variants={text}>
+      <motion.h2
+        className="heroTitleText"
+        variants={text}
+        onMouseEnter={() => cursorChangeHandler('hovered')}
+        onMouseLeave={() => cursorChangeHandler('')}
+      >
         R<span className="heroTitleTextTwo">Ô</span>SHAN K<span className="heroTitleTextTwo">Â</span>NWAR
       </motion.h2>
       <motion.p className="heroSubtitle" variants={text}>
