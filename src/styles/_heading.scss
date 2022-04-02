@@ -1,0 +1,26 @@
+@import './variables/base';
+
+.Section {
+  &Wrapper {
+    padding: 30px 50px;
+    border-top: 1px solid $navy_blue;
+  }
+  &Heading,
+  &SubHeading {
+    width: fit-content;
+    font-weight: 700;
+    transition: all 0.3s;
+    &:hover {
+      text-shadow: 1px 0 1px black;
+    }
+  }
+  &Heading {
+    font-size: $font_size_48;
+  }
+  &SubHeading {
+    font-size: $font_size_40;
+  }
+  &Text {
+    margin: 10px 0 20px 0;
+  }
+}
