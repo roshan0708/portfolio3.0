@@ -3,7 +3,7 @@ import { getAboutMe } from '@root/utils/helpers';
 
 const About = (): ReactElement => {
   return (
-    <div className="SectionWrapper">
+    <div className="SectionWrapper" style={{ paddingTop: 0 }}>
       <h2 className="SectionHeading">Who am i?</h2>
       <p className="SectionText">{getAboutMe()}</p>
 
